@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>第七次作业 39 张桦</title>
+	<style>
+   h1{
+		color: #0f0;
+	}
+   #one{
+		color: #f00;
+	}
+	.menu li{color: #f00}
+    li em {color: red;}
+    li > strong {color:red;}
+    h2 + ul {font-weight:bold;}
+    h3 + ul {font-weight:bold;}
+    .menu li{color: red}
+    h3 em {color: blue;}
+	</style>
+</head>
+<body>
+	<h1>(类型选择符)CSS选择器的练习</h1>
+<p id="one">ID选择符</p>
+<nav>
+	<ul class="menu">
+		<li>类选择符</li>
+		<li>aaaa</li>
+	</ul>
+    <ul>
+    	 <li>后代选择符</li>
+         <li>aa<em>aa</em></li>
+         <li>aaaa</li>
+    </ul>
+    <ul>
+    	<li>子代选择符</li>
+    	<li>aa<strong>aa</strong></li>
+        <li><em>aa</em><strong>aa</strong></li>
+    </ul>
+    
+    
+    
+    <h2>兄弟选择符</h2>
+    <ul>
+    	<li>aaaa</li>
+    </ul>
+    <h3>相邻选择符</h3>
+     <ul>
+    	
+    	<li>aa<strong>aa</strong></li>
+        <li>aaaa</li>
+    </ul>
+    <h4 >组合<em>选择符</em></h4>
+    <img src="01.gif">
+    <ul class="menu">
+    	<li>终于做好了，详细记住用法真难。</li>
+    	<li>aaaa</li>
+        <li>aaaa</li>
+    </ul>
+
+</nav>
+</body>
+</html>
