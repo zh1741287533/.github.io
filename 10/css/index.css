@@ -1,0 +1,51 @@
+
+*{
+	box-sizing: border-box;
+}
+
+body{
+	padding: 0;
+	margin: 0;	
+}
+.clearfix::after{
+	content: "";
+	display: table;
+	clear: both;
+}
+
+#wrapper{
+	max-width: 1200px;
+	min-width: 800px;
+	margin: auto;
+}
+header,footer{
+	border: 1px solid #000000;
+	margin: 1% 0;
+	height: 120px;
+}
+aside,main{
+	border: 1px solid #000000;
+}
+
+section,aside,main{
+	min-height: 300px;
+}
+aside{
+	width: 240px;
+	float: left;
+	/*float: right;*/
+}
+aside:nth-child(2){
+	width: 240px;
+	/*margin-left: 550px;*/
+	float: right;
+}
+main{
+	width: 700px;
+	margin-left: 250px;
+	
+}
+
+header h1{
+	margin: 10px 400px;
+}
