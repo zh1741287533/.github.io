@@ -1,0 +1,39 @@
+
+.menu ul{
+	display: inline-block;
+	margin: auto;
+}
+.menu li{
+	list-style-type: none;
+	float: left;
+	position: relative;
+	background: cyan;
+}
+.menu li a{
+ 
+	display: inline-block;
+
+	min-width: 100px;
+	min-height: 60px;
+
+	transition:text-indent 1s;
+
+.menu li:hover a{
+	color: #fff;
+	text-indent: 50px;
+}
+.menu li:after{
+	content: "";
+	position: absolute;
+	left: 20px;
+	right: 20px;
+	top: 10px;
+	bottom: 2px;
+	border-radius: 100%;
+	box-shadow: 0px 0px 10px 0 rgba(0,0,0,.4);
+	z-index: -1;
+	transition:all .6s;
+}
+.menu li:hover::after{
+   	box-shadow: 10px 10px 10px 0 rgba(0,0,0,.6);
+}

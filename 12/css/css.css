@@ -1,0 +1,34 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.nav{
+	background-color: #EEEEEE;
+	 height:40px;  
+     width:400px;  
+     margin:0 auto; 
+}
+li{
+	list-style-type :none;
+}
+ul li{
+	float: left;
+	line-height: 40px;
+	text-align: center;
+	position: relative;
+}
+
+ul li ul li{
+	float: none;
+	
+}
+ul li ul{
+	position: absolute;
+	top: 40px;
+	left: 0px;
+	display: none;
+	width: 90px;
+}
+ul li:hover ul{
+	display: block;
+}
