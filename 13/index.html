@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>第十三次作业</title>
+		<link href="https://cdn.bootcss.com/normalize/6.0.0/normalize.min.css" rel="stylesheet">
+			<style type="text/css">
+.imageList {
+	max-width: 1200px;
+	margin: auto;
+}	
+.imageList *,
+.imageList *::after,
+.imageList *::before{
+	box-sizing: border-box;
+	transition: all .5s ease;
+	/*padding: 0;
+	margin: 0;*/
+}
+.imageList figure {
+	width: 30%;
+	float: left;
+	margin: calc(10%/6);
+	overflow: hidden;
+	position: relative;
+	cursor: pointer;
+}
+.imageList figure img{
+	vertical-align: top;
+	max-width: 100%;
+}
+
+.imageList figure figcaption{
+	
+	position: absolute;
+	top:20px;
+	bottom:20px;
+	left:20px;
+	right:20px;
+	border: 1px solid #ffffff;
+	overflow: hidden;
+	
+}
+.imageList figure:hover figcaption{
+	top:10px;
+	bottom:10px;
+	left:10px;
+	right:10px;
+	box-shadow: 0 0 0 10px rgba(0, 0, 0, 0),inset 0px 0px 10px 10px rgba(0,0,0,0);
+}
+.imageList figure figcaption h3{
+	width: 100px;
+	height: 30px;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	opacity: 0;
+	z-index: 2;
+	color: #fff;
+}
+.imageList figure:hover figcaption h3{
+	opacity: 1;
+}
+		</style>
+	</head>
+	<body>
+	<div class="imageList clearfix">
+			<figure>
+				<figcaption><h3>珍惜时间</h3></figcaption>
+				<img src="img/01.jpg" alt="" />
+			</figure>
+			<figure>
+				<figcaption><h3>畅快休闲</h3></figcaption>
+				<img src="img/02.jpg" alt="" />
+			</figure>
+			<figure>
+				<figcaption><h3>享受美食</h3></figcaption>
+				<img src="img/03.jpg" alt="" />
+			</figure>
+		</div>
+	</body>
+</html>
