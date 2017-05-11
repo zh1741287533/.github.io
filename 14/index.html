@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>第14次作业</title>
+		<style type="text/css">
+		body{
+			background-color: aqua ;
+		}
+		.form{
+			width: 200PX;
+			height: 200px;
+			position: absolute;
+			left: 0;
+			right: 0;
+			top: 0;
+			bottom: 0;
+			margin: auto;
+			box-shadow: 1px 1px 1px 1px black;
+			text-align: center;	
+			}
+		.form input{
+			width: 70%;
+			height: 20px;
+			line-height: 20px;
+			
+		}	
+			.form input:hover{
+				border: 1px solid lightblue;
+				box-shadow: inset 0px 0px 3px 3px rgba(0,0,0,.5);
+			}
+			
+		</style>
+	</head>
+	<body>
+		<form action="#" class="form">
+			<h3>个人信息</h3>
+			<input type="text" name="name" id="name" placeholder="输入您的姓名" />
+			<input type="text" name="age" id="age" placeholder="输入您的年龄"/>
+			<input type="email" name="mail" id="mail" placeholder="输入您的邮箱"/>
+			<input type="submit" value="提交信息" />
+		</form>
+	</body>
+</html>
