@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>企业官方网站</title>
+      <link rel="stylesheet" type="text/css" href="css/normalize.min.css"/>
+      <link href='//fonts.googlefonts.net/css?family=Indie+Flower|Poiret+One|Lobster|Pacifico|Bangers|Orbitron|Dancing+Script|Architects+Daughter|Gloria+Hallelujah' rel='stylesheet' type='text/css'>
+      <style type="text/css">
+      	.clearfix::after{
+	content: "";
+	display: table;
+	clear: both;
+}
+ul{
+	list-style: none;
+	padding: 0px;
+}
+a{
+	text-decoration: none;
+}
+input{
+	border: none;
+	outline: none;
+}
+.container{
+	max-width: 1200px;
+	margin: auto;
+}
+/*
+ * header部分
+ * */
+header{
+	position: fixed;
+	width: 100%;
+	padding: 20px 0px;
+	background-color: rgba(0,0,0,0.1);
+}
+header a{
+	color: #fff;
+	text-shadow: 1px 1px 1px rgba(0,0,0,.5);
+}
+header a:hover{
+	color: #339BEB;
+}
+header .logo{
+	float: left;
+}
+header .logo img,
+header .logo span{
+	vertical-align: middle;
+}
+header .logo span{
+	font-size:3.5em;
+	font-family: 'Dancing Script', cursive;
+}
+header .topMenu{
+	float: right;
+	margin-top: 5px;
+}
+header .topMenu ul li{
+	float: left;
+	margin: 0px 30px;
+}
+.banner{
+	background:url(img/banner.jpg) ;
+	background-size: cover;
+	min-height: 800px;
+}
+/*body{
+		background: url(img/banner.jpg) no-repeat center top;
+		background-size: cover;
+}*/
+.banner .text{
+	max-width: 800px;
+	height: 180px;
+	color: #fff;
+	position: absolute;
+	margin: auto;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	text-shadow: 1px 1px 1px rgba(0,0,0,.5);
+	line-height: 1.5;
+} 
+.banner .text h1{
+	text-align: center;
+}
+.banner .text h1 strong{
+	color: #339BEB;
+}
+.banner .text p mark{
+	background-color: rgba(255,255,255,.5);
+	padding: 4px;
+	color: #000;
+}
+    </style>
+	</head>
+	<body>
+		<header>
+			<div class="container">
+				<div class="logo">
+				<a href="#">
+					<img src="img/logo.png"/>
+					<span>worthy</span>
+				</a>
+				
+			</div>
+			<nav class="topMenu">
+				<ul>
+				<li> <a href="#banner">首页</a></li>
+				<li> <a href="#about">关于</a></li>
+				<li> <a href="#service">服务</a></li>
+				<li> <a href="#case">案例</a></li>
+				<li> <a href="#contact">联系</a></li>
+				</ul>
+			</nav>
+			</div>
+		</header>
+		<main>
+		<!--首页开始-->
+			<section id="banner" class="banner">
+				<div class="container">
+					<div class="text">
+						<h1>We are <strong>worthy</strong></h1>
+						<p>Worthy是专业的<mark>全媒体信息服务提供商</mark>，可以为您全媒体的企业展示、产品推广、活动策划等系列服务，包括纸媒、传统数媒、移动互联网等多渠道、多方式、全方位的形象设计、营销与推广。</p>
+						<p>欢迎致电垂询！</p>	
+					</div>
+						
+					<!--margin塌陷-->
+					<!--
+						当父元素没有padding和border的时候，子元素的竖直方向的 margin将会应用在父盒子上
+					-->
+				</div>
+			</section>
+			<!--首页结束------------->
+			<!--关于开始-->
+			<section id="about" class="about">
+				
+			</section>
+			<!--关于结束------------->
+			<!--服务开始-->
+			<section id="service" class="service">
+				
+			</section>
+			<!--服务结束------------->
+			<!--案例开始-->
+			<section id="case" class="case">
+				
+			</section>
+			<!--案例结束------------->
+			<!--联系开始-->
+			<section id="contact" class="contact">
+				
+			</section>
+			<!--联系结束------------->
+		</main>
+		<!--中间结束----------------->
+		<!--脚部-->
+		<footer></footer>
+		<!--脚部结束----------------->
+		<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/js.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>
+
