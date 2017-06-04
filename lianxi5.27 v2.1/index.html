@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>企业官方网站</title>
+      <link rel="stylesheet" type="text/css" href="css/normalize.min.css"/>
+      <link href='//fonts.googlefonts.net/css?family=Indie+Flower|Poiret+One|Lobster|Pacifico|Bangers|Orbitron|Dancing+Script|Architects+Daughter|Gloria+Hallelujah' rel='stylesheet' type='text/css'>
+      <style type="text/css">
+      	.clearfix::after{
+	content: "";
+	display: table;
+	clear: both;
+}
+ul{
+	list-style: none;
+	padding: 0px;
+}
+a{
+	text-decoration: none;
+}
+input{
+	border: none;
+	outline: none;
+}
+.container{
+	max-width: 1200px;
+	margin: auto;
+}
+/*
+ * header部分
+ * */
+header{
+	position: fixed;
+	width: 100%;
+	padding: 20px 0px;
+	background-color: rgba(0,0,0,0.1);
+}
+header a{
+	color: #fff;
+	text-shadow: 1px 1px 1px rgba(0,0,0,.5);
+}
+header a:hover{
+	color: #339BEB;
+}
+header .logo{
+	float: left;
+}
+header .logo img,
+header .logo span{
+	vertical-align: middle;
+}
+header .logo span{
+	font-size:3.5em;
+	font-family: 'Dancing Script', cursive;
+}
+header .topMenu{
+	float: right;
+	margin-top: 5px;
+}
+header .topMenu ul li{
+	float: left;
+	margin: 0px 30px;
+}
+.banner{
+	background:url(img/banner.jpg) ;
+	background-size: cover;
+	min-height: 800px;
+}
+/*body{
+		background: url(img/banner.jpg) no-repeat center top;
+		background-size: cover;
+}*/
+.banner .text{
+	max-width: 800px;
+	height: 180px;
+	color: #fff;
+	position: absolute;
+	margin: auto;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	text-shadow: 1px 1px 1px rgba(0,0,0,.5);
+	line-height: 1.5;
+} 
+.banner .text h1{
+	text-align: center;
+}
+.banner .text h1 strong{
+	color: #339BEB;
+}
+.banner .text p mark{
+	background-color: rgba(255,255,255,.5);
+	padding: 4px;
+	color: #000;
+}
+section h2{
+	text-align: center;
+	margin-top: 50px;
+}
+section h2+p{
+	text-align: center;
+	margin-bottom: 80px;
+}
+.about{
+	
+}
+.about .img{
+	float: left;
+	width: 48%;
+}
+.about .img img{
+	width: 100%;
+}
+.about .note{
+	float: right;
+	width: 48%;
+}
+.about .note p{
+	line-height: 2;
+	margin: 20px 0px;
+}
+.about .note p:first-child{
+	margin-top: 0px;
+}
+.about .note ol{
+	list-style: none;
+	line-height: 2;
+	padding: 0;
+	counter-reset: liCounter;
+}
+.about .note li{
+	counter-increment: liCounter;
+}
+.about .note li::before{
+	/*计数器使用*/
+	content: counter(liCounter);
+	width: 20px;
+	height: 20px;
+	display: inline-block;
+	text-align: center;
+	line-height: 20px;
+	border-radius: 20px;
+	border: 1px dashed #000;
+	margin-right: 10px;
+	transition: transform .5s;
+}
+.about .note li:hover::before{
+	transform: translate(10px) rotate(360deg);
+}
+    </style>
+	</head>
+	<body>
+		<header>
+			<div class="container">
+				<div class="logo">
+				<a href="#">
+					<img src="img/logo.png"/>
+					<span>worthy</span>
+				</a>
+				
+			</div>
+			<nav class="topMenu">
+				<ul>
+				<li> <a href="#banner">首页</a></li>
+				<li> <a href="#about">关于</a></li>
+				<li> <a href="#service">服务</a></li>
+				<li> <a href="#case">案例</a></li>
+				<li> <a href="#contact">联系</a></li>
+				</ul>
+			</nav>
+			</div>
+		</header>
+		<main>
+		<!--首页开始-->
+			<section id="banner" class="banner">
+				<div class="container">
+					<div class="text">
+						<h1>We are <strong>worthy</strong></h1>
+						<p>Worthy是专业的<mark>全媒体信息服务提供商</mark>，可以为您全媒体的企业展示、产品推广、活动策划等系列服务，包括纸媒、传统数媒、移动互联网等多渠道、多方式、全方位的形象设计、营销与推广。</p>
+						<p>欢迎致电垂询！</p>	
+					</div>
+					</div>
+			</section>
+			<section id="about" class="about">
+				
+			</section>
+			<section id="service" class="service">
+			</section>
+			<section id="case" class="case">
+			</section>
+			<section id="contact" class="contact">
+			</section>
+			</main>
+		<script src="js/1.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/2.js" type="text/javascript" charset="utf-8"></script>
+		<section class="about" id="about">
+			<div class="container clearfix">
+				<h2>关于我们</h2>
+				<p>旨为您能更好，只为更好的您！！</p>
+				<!--左侧图像-->
+				<div class="img">
+					<img src="img/worthy.png" alt="" />
+				</div>
+				<!--右侧说明-->
+				<div class="note">
+					<p>Worthy是专业的全媒体信息服务提供商，可以为您全媒体的企业展示、产品推广、活动策划等系列服务，包括纸媒、传统数媒、移动互联网等多渠道、多方式、全方位的形象设计、营销与推广。</p>
+					<p>我们的主营业务包括:</p>
+					<ul>
+						<li>全媒体企业形象设计，网站开发、APP开发、微信公众号开发</li>
+						<li>企业产品全媒体营销，纸媒、数媒、移动互联网媒体运营与推广</li>
+						<li>企业活动策划，代理产品发布、年会、旅游等活动的策划与运营</li>
+						<li>企业员工教育、培训、进修等</li>
+					</ul>
+				</div>
+			<footer></footer>
+		</section>
+	</body>
+</html>
+
