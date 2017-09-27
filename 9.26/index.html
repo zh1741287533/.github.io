@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>lianxi</title>
+		<style type="text/css">
+			*::after{
+				box-sizing: border-box;
+			}
+			.guessNumberContainer{
+				width:250px;
+				min-height: 240px;
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				transform: translate(-50%,-50%);
+				
+			}
+			.guessNumberContainer h3{
+				text-align: center;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="guessNumberContainer">
+			<h3>猜数字游戏</h3>
+			<div class="inputGroup">
+			<input type="number"  id="num" 	/>
+			<input type="button" id="guess" value="提交" />
+			<!--<input type="button" id="repeat" value="重来" />-->
+		</div>
+		 <div class="resultPanel">
+		 	<div class="times">
+		 		剩余次数：<span></span><br>
+		 	</div>
+		 	<div class="info">猜测历史：<br><span></span></div>
+		 </div>
+		</div>
+		<script type="text/javascript">
+			var numRange=10,
+			  targetNumber=Math.floor(Math.random()*(numRange+1)),
+			  guessTimes=6,
+			  numTemp=0,
+			  oNum=document.querySelector(".guessNumberContainer #num"),
+			  oGuess=document.querySelector(".guessNumberContainer #guess"),
+			  oRepeat=document.querySelector(".guessNumberContainer #repeat"),
+			  oTimes=document.querySelector(".guessNumberContainer .times span"),
+			  oInfo=document.querySelector(".guessNumberContainer .info span");
+			  console.log(targetNumber);
+			oGuess.addEventListener("click",checkGuess);
+			oRepeat.addEventListener("click",repeatGame);	
+			oTimes.innerHTML=guessTimes;
+			//oNum.placeholder="0-"+numRange+"整数，"+guessTimes+"次机会";
+			oNum.setAttribute('placeholder',"0-"+numRange+"整数，"+guessTimes+"次机会");
+			
+			function checkGuess(){
+				numTemp = parseInt(oNum.value);
+				if(isNaN(numTemp)){
+					oInfo.innerHTML+="输入的不是数字<br>";
+				}
+				if(guessTimes-->0){
+					if(numTemp>targetNumber){
+						oInfo.innerHTML+="大<br>";
+					}
+					if(numTemp<targetNumber){
+						oInfo.innerHTML+="小<br>";
+					}
+					if(numTemp==targetNumber){
+						oInfo.innerHTML+="正确<br>";
+						closeGame();
+					}
+				
+//					else{
+//						oInfo.innerHTML+="不正确<br>";
+//					}
+				}
+				if(guessTimes<=0){
+					oInfo.innerHTML+="游戏结束<br>";
+					closeGame();
+				}
+				oTimes.innerHTML=guessTimes;
+				oNum.value="";
+				oNum.focus();
+			}
+			
+		</script>
+	</body>
+</html>
