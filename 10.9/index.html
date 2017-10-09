@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>随机抽奖</title>
+		<style type="text/css">
+			#choujiang th,td{
+				width: 100px;
+				height: 30px;
+				border: 1px solid black;
+
+			}
+			
+		</style>
+	</head>
+	<body>
+		<table id="choujiang">
+			<h1>随机抽奖</h1>
+			<tr><th>一等奖</th><td></td></tr>
+			<tr><th>二等奖</th><td></td><td></td></tr>
+			<tr><th>三等奖</th><td></td><td></td><td></td></tr>
+		</table>
+<div id="#">
+	<input type="button" name="dianji" id="dianji" value="点击抽奖" />
+</div>
+<script type="text/javascript">
+	var oTd=document.querySelectorAll("#choujiang td");
+	var oJp=new Array(5);
+	var odainji=document.getElementById('dianji');
+	odainji.addEventListener("click",jiang);
+	function jiang(){
+		for (var i=0;i<=6;i++){
+			oJp[i]=Math.floor(Math.random()*50+1);
+			oTd[i].innerHTML=oJp[i];
+		}
+		
+	}
+//		var oTd=document.querySelectorAll("#biaoge td");
+//			var oShuijizhi=new Array(5);
+//			var oChoujiang=document.getElementById('choujiang');
+//			oChoujiang.addEventListener("click",jiang);
+//			function jiang () {
+//				for (var i=0;i<6;i++) {
+//				oShuijizhi[i]=Math.floor(Math.random()*44+1);
+//				for(var j=0;j<i;j++){
+//					if(oShuijizhi[i]==oShuijizhi[j]){
+//						i--;
+//						console.log(oShuijizhi[i]);
+//						break;
+//						
+//					}
+//				}
+//				oTd[i].innerHTML=oShuijizhi[i];
+//				}
+//			}
+
+</script>
+	</body>
+</html>
