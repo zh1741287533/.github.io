@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>作业文字动态</title>
+		<style type="text/css">
+			#h1{
+				text-align: center;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="h1">作业于2017年10月15日15点20分完成</h1>
+		<script type="text/javascript">
+		var oh1=document.getElementById("h1");
+			var arry=oh1.innerText;
+			oh1.innerHTML="";
+			var i=0;
+			h1 =document.getElementById('text');
+		    function start(){
+		    	if (i<arry.length) {
+		    		oh1.innerText+=arry[i];
+//		    		h1.style.color ='red';
+		    	}
+		    	else{
+		    		i=-1;
+		    		oh1.innerHTML="";
+//		    		h1.style.color ='blue';
+		    	}
+		    	i++;
+		   
+		    }
+		setInterval(start,200);
+		
+		</script>
+	</body>
+</html>
