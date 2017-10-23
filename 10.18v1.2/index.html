@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>按钮练习作业外加播放器设置</title>
+	</head>
+	<body>
+		<h1>按钮练习作业外加音乐播放器设置</h1>
+		<audio src="1.mp3" controls="controls" preload id="music" hidden></audio>
+		<input type="button" name="#" id="a" value="播放" onclick="a();" />
+		<input type="button" name="#" id="b" value="暂停" onclick="b();" />
+		<input type="button" name="#" id="c" value="重播" onclick="c();" />
+		<input type="button" name="#" id="d" value="静音" onclick="d();" />
+		<input type="text" id="text" value="" />
+
+		<!--<input type="button" name="#" id="#" value="5" />
+		<input type="button" name="#" id="#" value="6" />-->
+		<script type="text/javascript">
+			var obtnlist=document.querySelectorAll("input");
+			var text=document.getElementById("text")
+			for (var i=0;i<obtnlist.length;i++)
+			{
+				obtnlist[i].addEventListener("click",(function(i){
+					return function(e){text.value=('单击第'+i+"按钮")};
+					
+				}
+				(i+1)
+			));
+			}
+			function a(){
+				var audio=document.getElementById('music');
+				if(audio.paused){
+					audio.play();
+				}
+//				else{
+//					audio.pause();
+//				}
+			}
+			function b(){
+				var audio=document.getElementById('music');
+				if(audio.played){
+					audio.pause();
+				}
+				
+			}
+			function c(){
+				var audio=document.getElementById('music');
+				if(audio.played){
+					audio.load();
+				}
+			
+			}
+			function d(){
+				var audio=document.getElementById('music');
+				if(audio.played){
+					audio.ended;
+				}
+			
+			}
+		</script>
+	</body>
+</html>
