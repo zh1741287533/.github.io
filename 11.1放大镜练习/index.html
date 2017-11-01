@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>放大镜练习</title>
+		<style type="text/css">
+			body{
+				/*min-height: 800px;*/
+			}
+			.fangda{
+				width: 1000px;
+				height: 800px;
+				position: relative;
+				overflow: hidden;
+			}
+			.fangda img{
+				width: 100%;
+				
+			}
+			.fangda .fangdahou{
+				width: 160px;
+				height: 160px;
+				/*background-color: #00f;*/
+				position: absolute;
+				left: 0;
+				top: 0;
+				transform: translate(-50%,-50%);
+				pointer-events: none;
+				display: none;
+				
+				background-repeat: no-repeat;
+			}
+			.fangda:hover .fangdahou{
+				display: block;
+			}
+		</style>
+	</head>
+	<body>
+		<figure class="fangda">
+			<img src="img/1.jpg"/>
+			<div class="fangdahou">
+				
+			</div>
+		</figure>
+		<script type="text/javascript">
+			var fangda = document.querySelector('.fangda');
+		    var	fangdahou = fangda.querySelector('.fangdahou');
+			var img=fangda.querySelector('img');
+			var ratio;
+			
+			img.addEventListener("load",function(event){
+				ratio = img.naturalWidth/img.width;
+				fangdahou.style.backgroundImage = 'url(' + img.src + ')';
+				
+			})
+			fangda.addEventListener("mousemove",function(event){
+				var x=event.offsetX||event.layerX;
+				var y=event.offsetY||event.layerY;
+				fangdahou.style.left=x+"px";
+				fangdahou.style.top=y+"px";
+				fangdahou.style.backgroundPosition=(-ratio*x+40)+"px "+(-ratio*y+40)+"px";
+			});
+		</script>
+	</body>
+</html>
