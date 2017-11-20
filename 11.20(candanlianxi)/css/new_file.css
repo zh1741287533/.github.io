@@ -1,0 +1,64 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.bar-menu {
+  
+  z-index: 10;
+  top: 0;
+  left: 0;
+  position: fixed;
+  width: 100%;
+  background: royalblue;
+}
+
+.hamburger {
+  font-size: 30px;
+}
+
+.button {
+  transform: none;
+  cursor: pointer;
+  padding: 1em;
+  transition: .5s;
+}
+
+.submenu {
+  display: none;
+}
+
+.submenu-item {
+  list-style: none;
+  left: -32px;
+  background: lightskyblue;
+}
+
+.side-menu {
+  display: none;
+  width: 250px;
+  position: absolute;
+  top: 85px;
+  height: 100vh;
+  background: lightskyblue;
+}
+
+.menu {
+  cursor: pointer;
+  list-style: none;
+}
+
+.menu li {
+  
+  padding: 1em 2em;
+}
+
+.menu-item {
+  font-size: 18px;
+  /*color: #fff;*/
+  text-decoration: none;
+}
+
+.fa-angle-right {
+  padding-left: .3em;
+}

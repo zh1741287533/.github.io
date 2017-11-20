@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>菜单练习</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	     <link rel="stylesheet" type="text/css" href="css/new_file.css"/>
+	</head>
+	<body>
+		<div class='bar-menu'>
+  <div class="hamburger"><i class="fa fa-bars button" id='button' aria-hidden="true"></i> 练习菜单</div>
+</div>
+<div class="side-menu" id='side-menu'>
+  <ul class='menu' id='menu'>
+    <li class='item'><a href="#" class='menu-item'>菜单1<i class="fa fa-angle-right" aria-hidden="true"></i></a>
+      <ul class="submenu">
+        <li class='submenu-item'>分支1</li>
+        <li class='submenu-item'>分支2</li>
+        <li class='submenu-item'>分支3</li>
+      </ul>
+    </li>
+    <li class='item'><a href="#" class='menu-item'>菜单2<i class="fa fa-angle-right" aria-hidden="true"></i></a>
+      <ul class="submenu">
+        <li class='submenu-item'>分支1</li>
+        <li class='submenu-item'>分支2</li>
+        <li class='submenu-item'>分支3</li>
+      </ul>
+    </li>
+    <li class='item'><a href="#" class='menu-item'>菜单3<i class="fa fa-angle-right" aria-hidden="true"></i></a>
+      <ul class="submenu">
+        <li class='submenu-item'>分支1</li>
+        <li class='submenu-item'>分支2</li>
+        <li class='submenu-item'>分支3</li>
+      </ul>
+    </li>
+   
+  </ul>
+</div>
+	</body>
+	<script type="text/javascript">
+		var button = document.getElementById("button");
+var sideMenu = document.getElementById("side-menu");
+var menu = document.getElementById("menu");
+var open = false;
+var menuLink = document.getElementsByClassName("menu-item");
+var item = document.getElementsByClassName("item");
+var submenu = document.getElementsByClassName("submenu");
+var arrow = document.getElementsByClassName("fa-angle-right");
+button.onclick = function() {
+  button.style.transform = "rotate(90deg)";
+  if (open === false) {
+    open = true;
+    sideMenu.style.display = "block";
+  } else {
+    open = false;
+    button.style.transform = "none";
+    sideMenu.style.display = "none";
+  }
+};
+menu.addEventListener(
+  "click",
+  function(e) {
+    var p = e.target.parentElement;
+    console.log(p)
+    var index = Array.prototype.indexOf.call(p.children, e.target);
+    if (e.target.className === "item" || e.target.className === "item open") {
+      if (item[index].className === "item") {
+        item[index].className += " open";
+        submenu[index].style.display = "block";
+        arrow[index].style.transform = "rotate(90deg)";
+      } else {
+        item[index].className = "item";
+        submenu[index].style.display = "none";
+        arrow[index].style.transform = "none";
+      }
+    }
+  },
+  false
+);
+
+	</script>
+</html>
