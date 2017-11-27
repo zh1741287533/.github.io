@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>模拟对话框</title>
+		<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+		<style type="text/css">
+			#chuangkou1{
+				cursor: pointer;
+			
+			}
+			.c{
+				
+				width: 300px;
+				height: 300px;
+				background: aqua;
+
+			}
+			#chuangkou3{
+				cursor: pointer;
+				display: none;
+				width: 300px;
+				height: 300px;
+				background: aqua;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="chuangkou1"><a href="#">打开模拟窗口</a>
+			
+		</div>
+		<div id="chuangkou2">
+			<i class="fa fa-close" id="chuangkou3"></i>
+		</div>
+		<script type="text/javascript">
+			var ochuang1 = document.getElementById("chuangkou1");
+			var ochuang2 = document.getElementById("chuangkou2");
+			var ochuang3 = document.getElementById("chuangkou3");
+			ochuang1.addEventListener("click",function(){
+				ochuang2.classList.toggle("chuangkou");
+				ochuang3.style.display="block";
+			});
+			ochuang3.addEventListener("click",function(){
+				ochuang2.classList.toggle("chuangkou");
+				ochuang3.style.display="none";
+			});
+		</script>
+	</body>
+</html>
