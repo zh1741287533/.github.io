@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.tooltip{
+				position: relative;
+			}
+			.tooltip span{
+				width: 180px;
+				padding: 5px 10px;
+				color: #FFFFFF;
+  				background: #000000;
+  				text-align: center;
+  				border-radius: 2px;
+  				position: absolute;
+  				left: -90px;
+  				top: -40px;
+  				opacity: 0;
+  				visibility:hidden;
+  				transition:opacity .5s;
+			}
+			.tooltip span::after{
+				content: "";
+				width: 0;
+				height: 0;;
+				position: absolute;
+				top: 100%;
+				left: 50%;
+  				margin-left: -8px;
+  				border-top: 8px solid black;
+  				border-right: 8px solid transparent;
+  				border-left: 8px solid transparent;
+			}
+			.tooltip:hover span{
+				opacity: 1;
+				visibility: visible;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<h2>工具提示</h2>
+			<p>tooltip提示框是网页中常见页面<a href="#" class="tooltip" data-content='组件内容'>组件</a>，在网页交互中应用广泛，我们利用该案例来演示提示文本的实现。</p>
+		</div>
+		<script type="text/javascript">
+			//封装代码
+			(function(){
+				var tips=document.querySelectorAll(".tooltip");
+				if (tips.length==0) {
+					return;
+				}
+				for (var i = 0; i < tips.length; i++) {
+					//创建span
+					var spanObj=document.createElement("span");
+					spanObj.innerHTML=tips[i].hasAttribute('data-content')?tips[i].getAttribute('data-content'):"空的文本";
+					tips[i].appendChild(spanObj);
+					
+					tips[i].addEventListener("mouseover",function(){
+						
+					});
+				}
+				//交互的部分，CSS里完成 hover
+			})();
+		</script>
+	</body>
+</html>
