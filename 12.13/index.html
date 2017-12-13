@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			
+			.menu{
+				overflow: hidden;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div class="menuContainer">
+			<ul class="menu">
+				
+				<li>012345678901234567890123456789012345678901234567890123456789</li>
+				<li>012345678901234567890123456789</li>
+				<li>01234567890123456789012345678901234567890123456789</li>
+				<li>012345678901234567890123456789</li>
+			</ul>
+		</div>
+		<script type="text/javascript">
+			var oMenu=document.querySelector('.menu'),
+			    oMenuItem=document.querySelectorAll('.menu li');
+			
+			var itemHeight=oMenuItem[0].offsetHeight,
+			    n=2,
+			    totalHeight=itemHeight*n,
+			    runFlag=true;
+			
+			for (var i = 0; i < oMenuItem.length; i++) {
+				oMenuItem[i].innerHTML=(i+1)+". "+oMenuItem[i].innerHTML;
+			}
+				
+			oMenu.style.height=totalHeight+"px";
+			oMenu.innerHTML+=oMenu.innerHTML;
+			oMenu.addEventListener("mouseover",function(){runFlag=false});
+			oMenu.addEventListener("mouseout",function(){runFlag=true});
+			
+			function run() {
+				var stop=oMenu.scrollTop%totalHeight==0&&!runFlag;
+				if(!stop){
+					oMenu.scrollTop==oMenu.scrollHeight/2?oMenu.scrollTop=0:oMenu.scrollTop++;
+				}
+				setTimeout(run,oMenu.scrollTop%totalHeight==0?1000:10);
+			};
+			setTimeout(run,1000);
+		</script>
+	</body>
+</html>
